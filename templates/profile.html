@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+<body id="body">
+
+    <div id="toolbar">
+        <div id="btn1cont" class="toolbarChild"></div>
+        <div id="pfpImgcont" class="toolbarChild">
+            <img src={{profile.pic}} id="pfp">
+            <p id="name">{{profile.name}}</p>
+        </div>
+        <div id="btn2cont" class="toolbarChild"></div>
+    </div>
+    <div id="contentcont">
+        <div id="content">
+            <div id="desc">
+                <textarea id="descField">{{profile.desc}}</textarea>
+            </div>
+            <div id="userSettingscont">
+                <div id="userSettings">
+                    <button class="userChoice">Dog lover</button>
+                    <button class="userChoice">Cat lover</button>
+                    <button class="userChoice">Foodie</button>
+                    <button class="userChoice">Silly</button>
+                    <button class="userChoice">Serious</button>
+                    <button class="userChoice">Outside person</button>
+                    <button class="userChoice">Inside person</button>
+                    <button class="userChoice">Love to workout</button>
+                    <button class="userChoice">Love to run</button>
+                    <button class="userChoice">Hate to workout</button>
+                    <button class="userChoice">Hate to run</button>
+                    <button class="userChoice">Light hearted</button>
+                    <button class="userChoice">Student</button>
+                    <button class="userChoice">Worker</button>
+                    <button class="userChoice">Jobless</button>
+                    <button class="userChoice">Eldrich god</button>
+                    <button class="userChoice">Undead</button>
+                    <button class="userChoice">Elf</button>
+                    <button class="userChoice">Orc</button>
+                    <button class="userChoice">Gnome</button>
+                    <button class="userChoice">Yao Ming</button>
+                    <button class="userChoice">Robert Klein</button>
+                </div>
+            </div>
+
+            <div id="userSettingscont2">
+                <div id="userSettings2">
+                    <div id="slidercont">
+                        <p class="sliderNum">1</p>
+                        <input type="range" id="slider" min="1" max="10" step="1" list="markers" value={{profile.slider}} />
+                        <p class="sliderNum">10</p>
+                    </div>
+
+                    <div id="ageJobcont">
+                        <div id="agecont">
+                            <input type="number" id="age" placeholder={{profile.age}} />
+                            <p class="agejobP">Age</p>
+                        </div>
+                        <div id="jobcont">
+                            <input type="text" id="job" placeholder={{profile.job}} />
+                            <p class="agejobP">Job title</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="submitBtncont">
+                <button id="submitBtn">Submit</button>
+            </div>
+
+        </div>
+
+        <div id="bushes">
+            <img src="{{ url_for('static', filename='img/orangeBush.png') }}" class="bush" id="bush1">
+            <img src="{{ url_for('static', filename='img/ForangeBush.png') }}" class="bush" id="bush2">
+        </div>
+
+    </div>
+
+
+
+    <datalist id="markers">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </datalist>
+
+      <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+
+body{
+    margin: 0;
+    overflow-x: clip;
+}
+
+#toolbar{
+
+    width: 100vw;
+    height: 30vh;
+
+    background-image: linear-gradient(to bottom, #E66535 10%, #E6A135);
+
+    top: 0;
+    position: sticky;
+
+    z-index: 1;
+
+    display: flex;
+
+    opacity: calc(1 - --scroll*0.0055);
+}
+
+#name{
+    text-align: center;
+    font-size: 160%;
+}
+
+.toolbarChild{
+    flex-grow: 1;
+}
+
+#pfpImgcont{
+    flex-grow: 2;
+}
+
+#pfp{
+    width: 50%;
+    aspect-ratio: 1/1;
+
+    margin-left: 25%;
+    margin-top: 5%;
+
+    border-radius: 50%;
+
+    padding: 1%;
+
+    background: linear-gradient(90deg, #68AEE6, #57606e);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; /* Ensures the gradient is only on the padding */
+}
+
+#contentcont{
+    margin-top: -1px;
+
+    height: 150vh;
+    width: 100vw;
+
+    background-image: linear-gradient(to bottom, #E6A135 80%, #E66535);
+
+    position: relative;
+    z-index: 2;
+
+    align-content: center;
+
+    box-shadow: 0 0vh 2vh black;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#content{
+    width: 80%;
+    height: 94%;
+
+    margin-left: 10%;
+
+    background-color: #e87246;
+
+    overflow: hidden;
+    
+    border-radius: 12%/4%;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: #E64635 3vw 3vw 2vw;
+}
+
+#desc{
+    height: 30%;
+}
+
+#descField{
+    width: 80%;
+    height: 90%;
+
+    margin-left: 10%;
+    margin-top: 10%;
+
+    border: none;
+
+    padding: 0;
+
+    font-size: 200%;
+
+    background-color: #b5c8e6;
+
+    resize: none;
+}
+
+#userSettingscont{
+    height: 30%;
+}
+
+#userSettings{
+    width: 90%;
+    height: 90%;
+
+    margin-left: 5%;
+    margin-top: 5%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.userChoice{
+    background-color: #b5c8e6;
+
+    margin-top: 1vh;
+
+    height: 10%;
+    border: none;
+    border-radius: 10%;
+    font-size: 100%;
+
+    transition: background 0.3s;
+}
+
+.activeUserChoice{
+    background-color: #68AEE6;
+
+}
+
+#userSettingscont2{
+    height: 30%
+}
+
+#userSettings2{
+    display: flex;
+    flex-direction: column;
+
+    width: 90%;
+    height: 90%;
+
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#slidercont{
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-around;
+}
+
+.sliderNum{
+    color: black;
+    font-size: 130%;
+}
+
+#slider{
+    accent-color: #68AEE6;
+
+    width: 70%;
+    height: 100%
+}
+
+#ageJobcont{
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    margin-left: 10%;
+
+    height: 50%;
+}
+
+#agecont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border:#68AEE6 solid 0.6vh;
+    border-radius: 3%/10%;
+    flex-grow: 1;
+
+    box-sizing: border-box;
+
+    height: 45%;
+
+}
+
+#jobcont{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+
+    border:#68AEE6 solid 0.6vh;
+    border-radius: 3%/10%;
+    flex-grow: 1;
+
+    box-sizing: border-box;
+
+    margin-top: 5%;
+
+    height: 45%;
+
+}
+
+.agejobP{
+    font-size: 120%;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#job{
+    background-color: #b5c8e6;
+
+    border: none;
+
+    height: 100%;
+    width: 80%;
+}
+
+#age{
+    background-color: #b5c8e6;
+
+    border: none;
+
+    height: 100%;
+    width: 80%;
+}
+
+#submitBtncont{
+    width: 100%;
+
+    height: 20vh;
+}
+
+#submitBtn{
+    border: none;
+
+    width: 60%;
+    height: 40%;
+
+    border: #68AEE6 solid 0.5vh;
+    border-radius: 5%/10%;
+
+    background-color: #b5c8e6;
+
+    margin-left: 20%;
+    margin-top: 10%;
+
+    font-size: 150%;
+
+}
+
+#bushes{
+    position: sticky;
+    bottom: 70vh;
+
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    z-index: 11;
+}
+
+.bush{
+    position: fixed;
+    bottom: -5vh;
+    width: 100%;
+
+    transition: transform 0.5s;
+}
+
+#bush1{
+    left: -30vw;
+    transform: translateX(3vw);
+}
+
+#bush2{
+    right: -30vw;
+    transform: translateX(-3vw);
+}
